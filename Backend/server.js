@@ -11,7 +11,7 @@ const socketIO = require("socket.io");
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://prash-chat-app.onrender.com",
   methods: ["GET", "POST"],
   credentials: true,
 })); 
@@ -33,7 +33,7 @@ const PORT = process.env.PORT || 5000;
 const server = http.createServer(app);
 const io = socketIO(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://prash-chat-app.onrender.com",
     methods: ["GET", "POST"],
     credentials: true,
   },
